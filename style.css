@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(150deg,#0f2b05 4.34%,#000 87.6%);
+    height: 100vh;
+    text-align: center;
+}
+
+body *{
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    padding: 75px 0;
+}
+
+.card{
+    display: inline-block;
+    width: 354px;
+    height: 508px;
+    background-image: url(assets/bg-ignite.svg);
+    opacity: 0;
+    animation: toTop .8s forwards;
+    cursor: pointer;
+    transition: all 0.4s;
+    transform: rotateY(180deg);
+}
+
+.card > img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #f7dd43;
+    margin-top: 115px;
+    cursor: pointer;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    animation: aparecerA .4s forwards;
+    transition: all 0.4s;
+    
+}
+
+.info{
+    margin-top: 98px;
+    color: white;
+    margin-left: 70px;
+    text-align: left;
+    transition: all 0.4s;
+    animation: toRight .4s forwards;
+}
+
+.info h1{
+    font-size: 18px;
+    line-height: 140%;
+}
+
+.info p{
+    font-size: 14px;
+    line-height: 160%;
+}
+
+@keyframes toTop{
+    from{
+        opacity: 0;
+        transform: translatey(-150px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+
+@keyframes toRight{
+    from{
+        opacity: 0;
+        transform: translatex(-350px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translatex(0);
+    }
+}
+
+@keyframes aparecerA{
+    from{
+        opacity: 0;
+        transform: translatex(350px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translatex(0);
+    }
+}
